@@ -7,7 +7,9 @@ import requests
 from lxml import etree
 
 from config1.path_config import project_path
+from webdriver_manager.chrome import ChromeDriverManager
 
+# driver_path = ChromeDriverManager().install()   # 自動判斷版本並下載
 
 # 自動下載對應版本chromedriver
 # 取得chrome version
