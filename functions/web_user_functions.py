@@ -6,7 +6,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 
-from config.path_config import project_path
+from config1.path_config import project_path, chrome_path
 from functions.common_functions import extract_archive, pack_chrome_extension
 
 

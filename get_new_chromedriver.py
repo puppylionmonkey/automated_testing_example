@@ -6,7 +6,7 @@ import zipfile
 import requests
 from lxml import etree
 
-from config.path_config import project_path
+from config1.path_config import project_path
 
 
 # 自動下載對應版本chromedriver
