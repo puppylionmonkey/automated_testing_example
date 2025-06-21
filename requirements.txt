@@ -1,0 +1,9 @@
+selenium-wire # python 3.7.9 ok # python >= 3.8 不行
+selenium==4.7.2
+ddddocr # 文字驗證碼圖像辨識，python <3.11
+requests
+pywin32
+lxml
+pyautogui
+beautifulsoup4
+requests

@@ -1,0 +1,5 @@
+venv
+.idea
+verification_code.png
+chromedriver_win32.zip
+LICENSE.chromedriver
