@@ -3,6 +3,17 @@ import requests
 # 測試 GET：取得假用戶列表
 BASE_URL = "https://jsonplaceholder.typicode.com"
 
+
+def create_user_api(name: str, username: str, email: str):
+    payload = {
+        "name": name,
+        "username": username,
+        "email": email
+    }
+    response = requests.post(f"{BASE_URL}/users", json=payload)
+    return response.json()
+
+
 def create_post_api(title: str, body: str, user_id: int = 1):
     payload = {
         "title": title,
@@ -13,16 +24,7 @@ def create_post_api(title: str, body: str, user_id: int = 1):
     return response.json()
 
 
-response = requests.get("https://jsonplaceholder.typicode.com/users")
-print("GET 狀態碼：", response.status_code)
-print("用戶列表：", response.json()[:2])  # 顯示前兩筆
-
-# 測試 POST：新增假貼文
-payload = {
-    "title": "測試標題",
-    "body": "這是測試內容",
-    "userId": 1
-}
-post_response = requests.post("https://jsonplaceholder.typicode.com/posts", json=payload)
-print("POST 狀態碼：", post_response.status_code)
-print("新增結果：", post_response.json())
+def get_users_api():
+    response = requests.get(f"{BASE_URL}/users")
+    assert response.status_code == 200, "GET /users 失敗"
+    return response.json()
